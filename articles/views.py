@@ -23,10 +23,14 @@ class ArticleUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         obj = self.get_object()
         return obj.author == self.request.user
 
-class ArticleDeleteView(LoginRequiredMixin, DeleteView):
+class ArticleDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Article
     template_name = 'article_delete.html'
     success_url = reverse_lazy('article_list')
+
+    def test_func(self):
+        obj = self.get_object()
+        return obj.author == self.request.user
 
 class ArticleCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = Article
