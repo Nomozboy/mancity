@@ -1,12 +1,193 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-    <h3  style="text-align: center; color: skyblue; margin: 30px;">Darvozabonlar</h3>
-    <div style="display:flex; flex-direction: row; background-color: skyblue;">
-        <ul>Ederson</ul>
-        <ul>Ortega</ul>
-        <ul>Carson</ul>
-        <ul>Steffen</ul>
-    </div>
-{% endblock content %}
+ <style>
+    .card {
+        display: inline-flex;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
+    .card-text{
+        font-size: 20px;  
+        font-weight: bold; 
+        color: skyblue;
+    }
+ </style>
+    <h3  style="text-align: center; color: skyblue; margin: 30px;">Darvozabonlar</h3>
+    <div class="card" style="width: 15rem; margin-left: 50px;">
+        <img src="{% static 'img/ederson.webp' %}" class="card-img-top"  alt="...">
+        <div class="card-body">
+          <p class="card-text">Ederson Moraes</p>
+        </div>
+      </div>
+      <div class="card" style="width: 15rem; margin: 15px;">
+        <img src="{% static 'img/ortega.webp' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Stefan Ortega</p>
+        </div>
+      </div>
+      <div class="card" style="width: 15rem; margin-right: 15px;">
+        <img src="{% static 'img/steffen.webp' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Zack Steffen</p>
+        </div>
+      </div>
+      <div class="card" style="width: 15rem;">
+        <img src="{% static 'img/carson.webp' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Scott Carson</p>
+        </div>
+      </div>
+
+      <hr>
+      <h3  style="text-align: center; color: skyblue; margin: 30px;">Himoyachilar</h3>
+      <div class="card" style="width: 15rem; margin-left: 50px;">
+        <img src="{% static 'img/walker.webp' %}" class="card-img-top"  alt="...">
+        <div class="card-body">
+          <p class="card-text">Kyle Walker</p>
+        </div>
+      </div>
+      <div class="card" style="width: 15rem; margin: 15px;">
+        <img src="{% static 'img/dias.webp' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Ruben Dias</p>
+        </div>
+      </div>
+      <div class="card" style="width: 15rem; margin-right: 15px;">
+        <img src="{% static 'img/stones.webp' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">John Stones</p>
+        </div>
+      </div>
+      <div class="card" style="width: 15rem;">
+        <img src="{% static 'img/ake.webp' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Nathan Ake</p>
+        </div>
+      </div>
+<br>
+<div class="card" style="width: 15rem; margin-left: 50px;">
+  <img src="{% static 'img/cancelo.webp' %}" class="card-img-top"  alt="...">
+  <div class="card-body">
+    <p class="card-text">Joao Canselu</p>
+  </div>
+</div>
+<div class="card" style="width: 15rem; margin: 15px;">
+  <img src="{% static 'img/laporte.webp' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Aymeric Laporte</p>
+  </div>
+</div>
+<div class="card" style="width: 15rem; margin-right: 15px;">
+  <img src="{% static 'img/gomez.webp' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Sergio Gomez</p>
+  </div>
+</div>
+<div class="card" style="width: 15rem;">
+  <img src="{% static 'img/akanji.webp' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Manuel Akanji</p>
+  </div>
+</div>
+
+<br>
+<div class="card" style="width: 15rem; margin-left: 50px;">
+  <img src="{% static 'img/lewis.webp' %}" class="card-img-top"  alt="...">
+  <div class="card-body">
+    <p class="card-text">Rico Lewis</p>
+  </div>
+</div>
+<div class="card" style="width: 15rem; margin: 15px;">
+  <img src="{% static 'img/joshua.webp' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text" >Joshua Wilson-Esbrand</p>
+  </div>
+</div>
+  
+<hr>
+<h3  style="text-align: center; color: skyblue; margin: 30px;">Yarim Himoyachilar</h3>
+<div class="card" style="width: 15rem; margin-left: 50px;">
+  <img src="{% static 'img/kalvin.webp' %}" class="card-img-top"  alt="...">
+  <div class="card-body">
+    <p class="card-text">Kalvin Phillips</p>
+  </div>
+</div>
+<div class="card" style="width: 15rem; margin: 15px;">
+  <img src="{% static 'img/ilkay.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Ilkay Gundogan</p>
+  </div>
+</div>
+<div class="card" style="width: 15rem; margin-right: 15px;">
+  <img src="{% static 'img/grilish.webp' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Jack Grealish</p>
+  </div>
+</div>
+<div class="card" style="width: 15rem;">
+  <img src="{% static 'img/rodri.webp' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Rodrigo</p>
+  </div>
+</div>
+<br>
+<div class="card" style="width: 15rem; margin-left: 50px;">
+<img src="{% static 'img/kevin.webp' %}" class="card-img-top"  alt="...">
+<div class="card-body">
+<p class="card-text">Kevin De Bryune</p>
+</div>
+</div>
+<div class="card" style="width: 15rem; margin: 15px;">
+<img src="{% static 'img/silva.webp' %}" class="card-img-top" alt="...">
+<div class="card-body">
+<p class="card-text">Bernardo Silva</p>
+</div>
+</div>
+<div class="card" style="width: 15rem; margin-right: 15px;">
+<img src="{% static 'img/foden.webp' %}" class="card-img-top" alt="...">
+<div class="card-body">
+<p class="card-text">Phil Foden</p>
+</div>
+</div>
+<div class="card" style="width: 15rem;">
+<img src="{% static 'img/palmer.webp' %}" class="card-img-top" alt="...">
+<div class="card-body">
+<p class="card-text">cole Palmer</p>
+</div>
+</div>
+
+<hr>
+<h3  style="text-align: center; color: skyblue; margin: 30px;">Hujumchilar</h3>
+<div class="card" style="width: 15rem; margin-left: 50px;">
+  <img src="{% static 'img/haaland.webp' %}" class="card-img-top"  alt="...">
+  <div class="card-body">
+    <p class="card-text">Erling Haaland</p>
+  </div>
+</div>
+<div class="card" style="width: 15rem; margin: 15px;">
+  <img src="{% static 'img/alvarez.webp' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Julian Alvarez</p>
+  </div>
+</div>
+<div class="card" style="width: 15rem; margin-right: 15px;">
+  <img src="{% static 'img/mahrez.webp' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Riyad Mahrez</p>
+  </div>
+</div>
+
+<hr>
+<h3  style="text-align: center; color: skyblue; margin: 30px;">Murabbiy</h3>
+<div class="card" style="width: 15rem; margin-left: 50px;">
+  <img src="{% static 'img/pep.webp' %}" class="card-img-top"  alt="...">
+  <div class="card-body">
+    <p class="card-text">Pep Guardiola</p>
+  </div>
+</div>
+  <hr>
+  {% endblock content %}
