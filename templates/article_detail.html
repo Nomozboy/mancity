@@ -1,18 +1,42 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+    <style>
+        @media only screen and (max-width: 425px) {
+            .card-title{
+                font-size: 20px;
+            }
+
+            h6{
+                font-size: 10px;
+                text-align: center;
+            }
+
+            .card-footer{
+                font-size: 10px;
+                
+            }
+        }
+    </style>
+
     <div class="container-fluid">
-        <div class="card" >
+        <div class="card">
           <div class="card-body">
               {%  if object.photo %}
-                <img class="card-img-top" style='width: 450px; height: auto; margin-left: 290px;' src="{{ object.photo.url }}" alt="{{ object.title }}">
+              <div style="text-align: center;">
+                <img class="card-img-top" style='width: 50%; height: auto;' 
+                src="{{ object.photo.url }}" alt="{{ object.title }}">
+             </div>
               {% endif %}
               <h1 class="card-title">{{ object.title }}</h1>
               <h6 class="card-subtitle mb-2 text-muted">Muallif: {{ object.author }} | {{ object.date }}</h6>
               <p class="card-text">{{ object.body | safe}}</p>
+              <div class="card-footer" style="text-align: center;">
               <a href="{% url 'article_edit' article.pk %}">Tahrirlash</a> |
               <a href="{% url 'article_delete' article.pk %}">O'chirish</a> | 
               <a href="{% url 'article_list' %}">Barcha postlar</a>
+          </div>
           </div>
             <div class="card">
                 <div class="card-header">Izohlar</div>
