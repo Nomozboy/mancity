@@ -28,6 +28,15 @@
                 <img class="card-img-top" style='width: 50%; height: auto;' 
                 src="{{ object.photo.url }}" alt="{{ object.title }}">
              </div>
+             {% elif object.video %}
+             <div style="text-align: center;">
+                <video width="640" height="340" controls
+                src="{{ object.video.url }}" alt="{{ object.title }}">
+                    <source src="movie.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                       Your browser does not support the video tag.
+                  </video>
+             </div>
               {% endif %}
               <h1 class="card-title">{{ object.title }}</h1>
               <h6 class="card-subtitle mb-2 text-muted">Muallif: {{ object.author }} | {{ object.date }}</h6>
