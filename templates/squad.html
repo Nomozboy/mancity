@@ -13,7 +13,12 @@
         display: inline-block;
         text-align: center;
         background-image: url("{% static 'img/bcg.png' %}");
+        transition: transform .3s ease-in;
         
+}
+
+.card:hover img {
+  transform: scale(1.2);
 }
 
 
@@ -130,7 +135,7 @@
         </div>
       </div>
       <div class="card">
-        <span class="member-card__shirt-number">4</span>
+        <span class="member-card__shirt-number">3</span>
         <div class="member-card__country-flag-wrapper">
           <img class="member-card__country-flag" src="https://mediacdn.mancity.com/meta/media/wyuhecht/pt.svg">
           </div>
